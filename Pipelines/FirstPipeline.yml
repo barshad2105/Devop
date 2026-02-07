@@ -1,21 +1,21 @@
 #My first Pipeline
 # This pipeline demonstrates running PowerShell commands
 
-trigger:
-none  # No trigger specified - will trigger on all branches by default
+trigger: none
+
 pool:
   name: 'Azure Pipelines'
   vmImage: 'windows-latest'
 
-  jobs:
-  - job: PowerShellDemo
-    displayName: 'Printing my name'
-    steps:
-    
-    - task: PowerShell@1
-      displayName: 'Printing my name using PowerShell'
-      inputs:
-        targetType: 'inline'  # Options: 'inline', 'filePath'
-        script: |
-          Write-Host "Hello , Arshad"
+jobs:
+- job: PowerShellDemo
+  displayName: 'Printing my name'
+  steps:
+  
+  - task: PowerShell@2
+    displayName: 'Printing my name using PowerShell'
+    inputs:
+      targetType: 'inline'  # Options: 'inline', 'filePath'
+      script: |
+        Write-Host "Hello , Arshad"
          
