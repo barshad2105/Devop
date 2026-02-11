@@ -1,20 +1,14 @@
 #My first Pipeline
 # This pipeline demonstrates running PowerShell commands
-
 trigger: none
 
 pool:
   vmImage: 'windows-latest'
 
-jobs:
-- job: PowerShellDemo
-  displayName: 'Printing my name'
-  steps:
-  
-  - task: PowerShell@2
-    displayName: 'Printing my name using PowerShell'
-    inputs:
-      targetType: 'inline'  # Options: 'inline', 'filePath'
-      script: |
-        Write-Host "Hello , Arshad"
-         
+steps:
+- task: PowerShell@2
+  displayName: 'Printing my name using PowerShell'
+  inputs:
+    targetType: 'inline'
+    script: |
+      Write-Host "Hello, Arshad"
