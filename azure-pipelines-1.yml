@@ -3,7 +3,7 @@
 trigger: none
 
 pool:
-  vmImage: 'TESTVM'
+  name: 'TESTVM'
 
 steps:
 - task: Bash@3
