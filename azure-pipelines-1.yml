@@ -6,9 +6,9 @@ pool:
   vmImage: 'TESTVM'
 
 steps:
-- task: PowerShell@2
-  displayName: 'Printing my name using PowerShell'
+- task: Bash@3
+  displayName: 'Printing my name using Batch'
   inputs:
     targetType: 'inline'
     script: |
-      Write-Host "Hello, Arshad"
+      echo "hello,Arshad"
